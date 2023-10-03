@@ -1,0 +1,120 @@
+/* Reset some default browser styles */
+body, h1, h2, p, ul {
+  margin: 0;
+  padding: 0;
+}
+
+/* Global styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+/* Header styles */
+header {
+  background: url('landscape.jpg') center center no-repeat;  /* 设置背景图片 */
+  background-size: cover; /* 背景图片大小调整为完全覆盖header */
+  color: #333;
+  text-align: center;
+  padding: 150px 0; /* 根据图片的高度和h1的大小进行适当调整 */
+}
+
+nav {
+    background-color: #2a2a2a; /* 设置导航栏的背景颜色 */
+    padding: 10px 0; /* 上下填充 */
+    text-align: center; /* 使内容居中 */
+}
+
+nav ul {
+    list-style: none; /* 移除默认的列表样式 */
+    padding: 0; /* 移除默认的填充 */
+    margin: 0; /* 移除默认的外边距 */
+}
+
+nav li {
+    display: inline-block; /* 使列表项在同一行显示 */
+    margin: 0 20px; /* 左右的外边距 */
+}
+
+nav a {
+    text-decoration: none; /* 移除默认的下划线 */
+    color: #fff; /* 文字颜色为白色 */
+    padding: 5px 10px; /* 文字周围的填充 */
+    transition: border-bottom 0.3s ease; /* 添加过渡效果 */
+}
+
+nav a:hover {
+    border-bottom: 3px solid #e74c3c; /* 鼠标悬停时的底部边框 */
+}
+/* Hero image styles */
+.hero-image {
+  position: relative;
+  background: url('landscape.jpg');
+  padding: 10px 0;
+}
+
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #fff;
+}
+
+/* Main content styles */
+main {
+  margin: 40px auto;
+  max-width: 800px;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+article {
+  margin-bottom: 40px;
+}
+
+article h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+article p {
+  font-size: 16px;
+  line-height: 1.6;
+}
+article a {
+    text-decoration: none; /* 移除默认的下划线 */
+    color: #333; /* 文字颜色为白色 */
+    padding: 5px 10px; /* 文字周围的填充 */
+    transition: border-bottom 0.3s ease; /* 添加过渡效果 */
+}
+
+article a:hover {
+    border-bottom: 3px solid #e74c3c; /* 鼠标悬停时的底部边框 */
+}
+
+/* Footer styles */
+footer {
+  text-align: center;
+  padding: 20px 0;
+  background-color: #333;
+  color: #fff;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  main {
+    padding: 10px;
+  }
+  
+  .hero-image {
+    padding: 50px 0;
+  }
+  
+  article h2 {
+    font-size: 20px;
+  }
+}
