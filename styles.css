@@ -19,20 +19,33 @@ header {
   padding: 20px 0;
 }
 
+nav {
+    background-color: #2a2a2a; /* 设置导航栏的背景颜色 */
+    padding: 10px 0; /* 上下填充 */
+    text-align: center; /* 使内容居中 */
+}
+
 nav ul {
-  list-style: none;
+    list-style: none; /* 移除默认的列表样式 */
+    padding: 0; /* 移除默认的填充 */
+    margin: 0; /* 移除默认的外边距 */
 }
 
 nav li {
-  display: inline;
-  margin-right: 20px;
+    display: inline-block; /* 使列表项在同一行显示 */
+    margin: 0 20px; /* 左右的外边距 */
 }
 
 nav a {
-  text-decoration: none;
-  color: #fff;
+    text-decoration: none; /* 移除默认的下划线 */
+    color: #fff; /* 文字颜色为白色 */
+    padding: 5px 10px; /* 文字周围的填充 */
+    transition: border-bottom 0.3s ease; /* 添加过渡效果 */
 }
 
+nav a:hover {
+    border-bottom: 3px solid #e74c3c; /* 鼠标悬停时的底部边框 */
+}
 /* Hero image styles */
 .hero-image {
   position: relative;
