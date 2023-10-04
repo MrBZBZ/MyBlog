@@ -91,6 +91,11 @@ main {
   padding: 20px;
   background-color: #fff;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  opacity: 0;  /* 初始时设置为完全透明 */
+  transition: opacity 1s ease-out;  /* 添加过渡效果 */
+   transform: translateY(50px); /* 设置初始状态，稍微在Y轴上下移，可以调整为其他值 */
+   opacity: 0; 
+   transition: transform 0.5s, opacity 0.5s; /* 这里添加过渡效果 */
 }
 
 article {
