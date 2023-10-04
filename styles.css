@@ -63,7 +63,7 @@ nav a:hover {
   color: #fff;
 }
 body {
-    background-image: url('start.jpg');
+    background-image: url('star.jpg');
     background-size: cover;
     background-attachment: fixed;
     /* 其他样式保持不变... */
