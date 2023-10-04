@@ -45,7 +45,7 @@ nav a {
 }
 
 nav a:hover {
-    border-bottom: 3px solid #e74c3c; /* 鼠标悬停时的底部边框 */
+    border-bottom: 3px solid #fff /* 鼠标悬停时的底部边框 */
 }
 /* Hero image styles */
 .hero-image {
@@ -99,7 +99,7 @@ article a {
 }
 
 article a:hover {
-    border-bottom: 3px solid #e74c3c; /* 鼠标悬停时的底部边框 */
+    border-bottom: 3px solid #333; /* 鼠标悬停时的底部边框 */
 }
 
 /* Footer styles */
