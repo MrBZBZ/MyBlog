@@ -96,7 +96,7 @@ main {
   transition: opacity 1s ease-out;  /* 添加过渡效果 */
    transform: translateY(50px); /* 设置初始状态，稍微在Y轴上下移，可以调整为其他值 */
    opacity: 0; 
-   transition: transform 3s, opacity 3s; /* 这里添加过渡效果 */
+   transition: transform 0.5s, opacity 3s; /* 这里添加过渡效果 */
 }
 
 article {
