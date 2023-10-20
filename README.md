@@ -3,4 +3,4 @@
 * 尝试将ChatGPT运用到网站搭建上来，使小白更容易上手
 * 我前端懂的东西很少，所以做的还是挺烂的
 # 网站体验地址
-* 网站在https://MrBZBZ.github.io/Study上线
+* 网站在 https://MrBZBZ.github.io/Study 上线
