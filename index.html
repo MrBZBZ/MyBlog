@@ -12,22 +12,6 @@
     <title>Leaves的小站</title>
 </head>
 <body class = "bg1">
-    <script>
-        // 存储背景图片类名和对应顺序
-        const backgrounds = ['bg1', 'bg2', 'bg3', "bg4"];
-        let current = 0;
-    
-        // 切换背景图片函数
-        function switchBackground() {
-            document.body.className = backgrounds[current];
-            
-            // 循环到下一个背景
-            current = (current + 1) % backgrounds.length;
-        }
-    
-        // 每隔5秒切换一次背景
-        setInterval(switchBackground, 8000);
-    </script>
     <div id="rainBox"></div>
     <header>
         <script>
