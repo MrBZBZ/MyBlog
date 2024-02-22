@@ -1,0 +1,296 @@
+
+body, h1, h2, p, ul {
+  margin: 0;
+  padding: 0;
+}
+
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #ffffff;
+}
+
+
+header {
+  background: url('img/1.jpg') center center no-repeat;
+  background-size: cover;
+  color: #ffffff;
+  text-align: center;
+  padding: 100px 0;
+}
+
+nav {
+    background-color: #2a2a2a; /* 设置导航栏的背景颜色 */
+    padding: 10px 0; /* 上下填充 */
+    text-align: center; /* 使内容居中 */
+}
+
+nav ul {
+    list-style: none; /* 移除默认的列表样式 */
+    padding: 0; /* 移除默认的填充 */
+    margin: 0; /* 移除默认的外边距 */
+}
+
+nav li {
+    display: inline-block; /* 使列表项在同一行显示 */
+    margin: 0 20px; /* 左右的外边距 */
+}
+
+nav a {
+    text-decoration: none; /* 移除默认的下划线 */
+    color: #fff; /* 文字颜色为白色 */
+    padding: 5px 10px; /* 文字周围的填充 */
+    transition: border-bottom 0.3s ease; /* 添加过渡效果 */
+}
+
+nav a:hover {
+    border-bottom: 3px solid #fff /* 鼠标悬停时的底部边框 */
+}
+/* Hero image styles */
+.hero-image {
+  position: relative;
+  background: url('img/1.jpg');
+  padding: 10px 0;
+}
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+.dropdown-content {
+  z-index: 999;
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 12px 16px;
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #fff;
+}
+body {
+    background-size: cover;
+    background-attachment: fixed;
+    transition: background-image 1s; /* 添加过渡效果 */
+}
+.bg1 { background-image: url('img/3.jpg'); }
+
+/* Main content styles */
+main {
+  margin: 40px auto;
+  max-width: 600px;
+  padding: 20px;
+  background: #00000080;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: opacity 1s ease-out;  /* 添加过渡效果 */
+   transform: translateY(50px); /* 设置初始状态，稍微在Y轴上下移，可以调整为其他值 */
+   transition: transform 0.5s, opacity 3s; /* 这里添加过渡效果 */
+}
+
+article {
+  margin-bottom: 40px;
+}
+
+article h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+article p {
+  font-size: 16px;
+  line-height: 1.6;
+}
+article a {
+    text-decoration: none; /* 移除默认的下划线 */
+    color: #ffffff; /* 文字颜色为白色 */
+    padding: 5px 10px; /* 文字周围的填充 */
+    transition: border-bottom 0.3s ease; /* 添加过渡效果 */
+}
+
+article a:hover {
+    border-bottom: 3px solid #333; /* 鼠标悬停时的底部边框 */
+}
+
+/* Footer styles */
+footer {
+  text-align: center;
+  padding: 20px 0;
+  background-color: #333;
+  color: #fff;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  main {
+    padding: 10px;
+  }
+  
+  .hero-image {
+    padding: 50px 0;
+  }
+  
+  article h2 {
+    font-size: 20px;
+  }
+}
+#loader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@keyframes spin {
+  0% {
+      transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+      transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+.spinner {
+  border: 16px solid #f3f3f3;
+  border-top: 16px solid #3498db;
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  animation: spin 2s linear infinite;
+}
+*{
+  padding: 0;
+  margin: 0;
+}
+#rainBox{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+}
+.rain{
+  position: absolute;
+  width: 2px;
+  height: 50px;
+  background: linear-gradient(rgba(255,255,255,.3),rgba(255,255,255,.6));
+}
+.container {
+  text-align: center; /* 可选：让内容居中 */
+}
+
+.container-left{
+  display: inline-block;
+  flex-direction: column;
+  align-items: center; /* 让子元素在垂直方向上居中 */
+  text-align: center;
+  vertical-align: top;
+  box-sizing: border-box;
+}
+.container-right {
+  display: inline-block;
+  vertical-align: top; /* 防止元素底部对齐 */
+  box-sizing: border-box; /* 让内边距和边框包含在元素总宽度内 */
+}
+.avatar-container {
+  width: 100px; /* 根据需要调整头像大小 */
+  height: 100px;
+  border-radius: 50%; /* 圆形头像 */
+  overflow: hidden;
+}
+
+.avatar {
+  width: 100%;
+  height: auto; /* 自动缩放以适应容器尺寸 */
+}
+.introduction {
+  text-align: left;
+}
+
+
+
+
+
+/* 输入框样式 */
+.form-input {
+  display: inline-block;
+  width: 80%; /* 宽度充满父容器 */
+  padding: 0.5rem 1rem; /* 内边距 */
+  font-size: 1rem; /* 字体大小 */
+  line-height: 1.1; /* 行高 */
+  color: #333; /* 文本颜色 */
+  background-color: #fff; /* 背景颜色 */
+  border: 1px solid #ccc; /* 边框 */
+  border-radius: 4px; /* 边框圆角 */
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.075); /* 内阴影 */
+  transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s; /* 添加过渡效果 */
+  outline: none; /* 移除浏览器默认轮廓 */
+}
+
+/* 提交按钮样式 */
+.btn {
+  display: inline-block;
+  margin-top: 1rem; /* 与输入框间距 */
+  padding: 0.5rem 1rem; /* 内边距 */
+  font-size: 1rem; /* 字体大小 */
+  font-weight: bold; /* 加粗字体 */
+  text-align: center; /* 文本居中对齐 */
+  text-decoration: none; /* 去除下划线 */
+  color: #fff; /* 文本颜色 */
+  background-color: #2a2a2a; /* 背景颜色 */
+  border: none; /* 去除边框 */
+  border-radius: 4px; /* 边框圆角 */
+  cursor: pointer; /* 鼠标悬停时变为手形 */
+  transition: background-color 0.3s ease; /* 添加背景色过渡效果 */
+}
+.btn:hover {
+  background-color: #fff; /* 鼠标悬停时的颜色 */
+  color: #2a2a2a;
+}
+
+.btn:active {
+  background-color: #2a2a2a; /* 按下时的颜色 */
+  color: #fff;
+  transform: translateY(1px); /* 按下时微小位移，增加按下的感觉 */
+}
+
+
+  /* 为整个表格设置基础样式 */
+  .infoTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+/* 设置表头样式 */
+.infoTable thead th {
+    background-color: #f2f2f2;
+    color: #2a2a2a;
+    text-align: center;
+    padding: 8px;
+    font-weight: bold;
+    border: 1px solid #ddd;
+}
+
+/* 设置表格行样式 */
+.infoTable tbody tr {
+    border: 1px solid #ddd;
+    transition: all .3s ease;
+}
+
+/* 设置单元格样式 */
+.infoTable td {
+    padding: 8px;
+    text-align: center;
+    vertical-align: middle;
+    border: 1px solid #ddd;
+}
