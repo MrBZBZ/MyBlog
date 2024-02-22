@@ -84,9 +84,6 @@ body {
     transition: background-image 1s; /* 添加过渡效果 */
 }
 .bg1 { background-image: url('img/3.jpg'); }
-.bg2 { background-image: url('img/4.jpg'); }
-.bg3 { background-image: url('img/2.jpg'); }
-.bg4 { background-image: url('img/back.jpg'); }
 
 /* Main content styles */
 main {
