@@ -15,27 +15,37 @@
     <div id="rainBox"></div>
     <header>
         <script>
-fetch('https://v1.hitokoto.cn/')
-  .then(response => {
-    if (response.ok) {
-      return response.json();
-    } else {
-      throw new Error('网络请求失败');
-    }
-  })
-  .then(data => {
-    const hitokoto = data.hitokoto;
-    
-    // 修正if条件并确保变量在使用前被赋值
-    let from = (data.from === null || data.from === "网络") ? "" : data.from;
-    let author = data.from_who === null ? "" : data.from_who;
+  let defaultText = "用代码表达言语的魅力，用代码书写山河的壮丽。";
 
-    document.getElementById('hitokotoContainer').innerText = hitokoto;
-    document.getElementById('authorContainer').innerText = "         —— " + author + "「" + from + "」";
-  })
-  .catch(error => {
-    console.error('Error:', error);
-  });
+  fetch('https://v1.hitokoto.cn/')
+    .then(response => {
+      if (response.ok) {
+        return response.json();
+      } else {
+        throw new Error('网络请求失败');
+      }
+    })
+    .then(data => {
+      // 检查数据是否有效
+      if (!data || !data.hitokoto) {
+        document.getElementById('hitokotoContainer').innerText = defaultText;
+        return;
+      }
+
+      const hitokoto = data.hitokoto;
+      
+      let from = (data.from === null || data.from === "网络") ? "" : data.from;
+      let author = data.from_who === null ? "" : data.from_who;
+
+      document.getElementById('hitokotoContainer').innerText = hitokoto;
+      document.getElementById('authorContainer').innerText = "         —— " + author + "「" + from + "」";
+    })
+    .catch(error => {
+      console.error('Error:', error);
+      // 当接口请求错误时，也恢复为默认文字
+      document.getElementById('hitokotoContainer').innerText = defaultText;
+      document.getElementById('authorContainer').innerText = "";
+    });
         </script>
         <h1 id="hitokotoContainer"></h1>
         <h1 id="authorContainer"></h1>
