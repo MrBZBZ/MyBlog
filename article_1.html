@@ -24,13 +24,20 @@
         }
     
         // 每隔5秒切换一次背景
-        setInterval(switchBackground, 5000);
+        setInterval(switchBackground, 8000);
     </script>
     <div id="rainBox"></div>
     <header>
         <h1>隐私查询页</h1>
         <h2>仅供查询自己信息泄露，不可用于违法犯罪</h2>
     </header>
+    <nav>
+        <ul>
+            <li><a href="https://space.bilibili.com/1932462042" target="_blank">我的bilibili主页</a></li>
+            <li><a href="https://github.com/MrBZBZ" target="_blank">我的Github主页</a></li>
+            <li><a href="https://github.com/MrBZBZ/bzbz/" target="_blank">本项目仓库</a></li>
+        </ul>
+    </nav>
     <div class="container">
         <main>
             <section class="featured-image">
@@ -40,7 +47,6 @@
                     <h1>QQ旧绑查询</h1>
                     <input type="text" id="queryInput_1" class="form-input">
                     <p><button onclick="fetchDataForQQ()" class="btn">查询</button></p>
-                
                     <!-- 显示查询结果区域 -->
                     <h2>查询结果:</h2>
                     <table id="infoTable_1" class="infoTable">
