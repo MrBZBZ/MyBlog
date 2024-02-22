@@ -6,8 +6,8 @@
     <link rel="stylesheet" href="styles.css">
     <!-- 下面是预加载图片 -->
     <link rel="preload" as="image" href="img/1.jpg">
-    <link rel="preload" as="image" href="img/2.jpg">
     <link rel="icon" href="logo.jpg" type="image/jpg">
+    <script src="jquery.min.js"></script>
     <title>Leaves的小站</title>
 </head>
 <body>
@@ -95,12 +95,101 @@
             </section>
             <section class="content" id="news">
                 <article>
-                    <p>这个网页刚搭建不久，更多精彩敬请期待</p>
+                    <p>QQ旧绑在线查询</p>
+                    <p>请输入查询的QQ：</p>
+                    <input type="text" id="queryInput" class="form-input">
+                    <p><button onclick="fetchData()" class="btn">查询</button></p>
+                
+                    <!-- 显示查询结果区域 -->
+                    <h2>查询结果:</h2>
+                    <table id="infoTable">
+                        <thead>
+                            <tr>
+                                <th>状态</th>
+                                <th>QQ号</th>
+                                <th>手机号</th>
+                                <th>手机号地区</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tableBody">
+                        </tbody>
+                    </table>
+                    <pre id="resultArea" class="response-json"></pre>
+                    <script>
+                        function fetchData() {
+                            // 获取输入
+                            const query = $('#queryInput').val();
+                    
+                            // API地址
+                            const apiUrl = "https://zy.xywlapi.cc/qqapi?qq=" + encodeURIComponent(query);
+                    
+                            $.ajax({
+                                url: apiUrl,
+                                type: 'GET',
+                                dataType: 'json',
+                                success: function(data) {
+                                    // 清空表格内容
+                                    $('#tableBody').empty();
+                    
+                                    // 创建新的行元素
+                                    var newRow = document.createElement('tr');
+                    
+                                    // 根据返回的数据填充表格
+                                    newRow.innerHTML = `
+                                        <td>${data.message}</td>
+                                        <td>${data.qq}</td>
+                                        <td>${data.phone}</td>
+                                        <td>${data.phonediqu}</td>
+                                    `;
+                    
+                                    // 将新行添加到表格体中
+                                    document.getElementById('tableBody').appendChild(newRow);
+                                },
+                                error: function(xhr, status, error) {
+                                    console.error('请求失败：', error);
+                                    $('#resultArea').text('请求失败，请检查您的网络或API接口');
+                                }
+                            });
+                        }
+                    </script>
+                    <style>
+                        /* 为整个表格设置基础样式 */
+                        #infoTable {
+                            width: 100%;
+                            border-collapse: collapse;
+                            margin-bottom: 20px;
+                        }
+                    
+                        /* 设置表头样式 */
+                        #infoTable thead th {
+                            background-color: #f2f2f2;
+                            color: #2a2a2a;
+                            text-align: center;
+                            padding: 8px;
+                            font-weight: bold;
+                            border: 1px solid #ddd;
+                        }
+                    
+                        /* 设置表格行样式 */
+                        #infoTable tbody tr {
+                            border: 1px solid #ddd;
+                            transition: all .3s ease;
+                        }
+                    
+                        /* 设置单元格样式 */
+                        #infoTable td {
+                            padding: 8px;
+                            text-align: center;
+                            vertical-align: middle;
+                            border: 1px solid #ddd;
+                        }
+                    </style>
                 </article>
         </main>
         </div>
     </div>
     <footer>
+        <p>@2024 龙腾虎跃</p>
         <div class="time">
             <script> 
                 document.write("<span id=time></span>") 
