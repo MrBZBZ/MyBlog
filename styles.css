@@ -13,7 +13,7 @@ body {
 
 
 header {
-  background: url('https://telegraph-image-bc2.pages.dev/file/b2fa088b50f07e82f6917.jpg') center center no-repeat;
+  background: url('img/1.jpg') center center no-repeat;
   background-size: cover;
   color: #ffffff;
   text-align: center;
@@ -51,7 +51,7 @@ nav a:hover {
 /* Hero image styles */
 .hero-image {
   position: relative;
-  background: url('https://telegraph-image-bc2.pages.dev/file/b2fa088b50f07e82f6917.jpg');
+  background: url('img/3.jpg');
   padding: 10px 0;
 }
 .dropdown {
