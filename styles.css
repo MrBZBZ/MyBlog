@@ -21,7 +21,23 @@ header {
   font-family: "iconfont"
 }
 
+@keyframes scaleAndFade {
+  0% { /* 初始状态 */
+      transform: scale(1);
+      opacity: 1;
+  }
+  50% { /* 中间状态，可以调整以控制动画节奏 */
+      transform: scale(1.1);
+      opacity: 0.9; /* 稍微降低透明度 */
+  }
+  100% { /* 结束状态 */
+      transform: scale(1);
+      opacity: 1;
+  }
+}
 nav {
+    gap: 10px; /* 如果需要，可以在导航项之间添加间距 */
+    overflow: auto; /* 确保内容放大超出时可以滚动查看 */
     background-color: #2a2a2a; /* 设置导航栏的背景颜色 */
     padding: 10px 0; /* 上下填充 */
     text-align: center; /* 使内容居中 */
@@ -39,14 +55,15 @@ nav li {
 }
 
 nav a {
+    display: inline-block; /* 保证a标签可以被缩放 */
+    transition: transform 0.3s; /* 添加过渡效果使放大过程平滑 */
     text-decoration: none; /* 移除默认的下划线 */
     color: #fff; /* 文字颜色为白色 */
     padding: 5px 10px; /* 文字周围的填充 */
-    transition: border-bottom 0.3s ease; /* 添加过渡效果 */
 }
 
 nav a:hover {
-    border-bottom: 3px solid #fff /* 鼠标悬停时的底部边框 */
+  animation: scaleAndFade 0.3s ease forwards; 
 }
 /* Hero image styles */
 .hero-image {
