@@ -61,44 +61,60 @@
         </ul>
     </nav>
     <div class="container">
-        <div class="container-inner">
-            <div class="container-left">
-                <main>
-                    <!-- 头像部分 -->
-                    <div class="avatar-container">
-                        <img class="avatar" src="logo.jpg" alt="Your Name's Avatar">
-                    </div>
-                    <!-- 自我介绍部分 -->
-                    <div class="introduction">
-                        <h2>关于我</h2>
-                        <h2>Leaves_awa</h2>
-                        <article>
-                            <h3>安慕希原神卡拉彼丘糕手</h3>
-                            <h3>没事干的时候喜欢整点花活，B站最高视频播放量高达<h2>2.5W</h2></h3>
-                            <p>擅长语言：Python Markdown</p>
-                            <p>涉猎各种技术----社会工程学，爬虫，前端渗透，数据挖掘与分析，红队技术，密码学，BackDoor……</p>
-                            <p>技术本无罪，有罪的是滥用技术之人！</p>
-                            <p>爱好：</p>
-                            <p>剪视频（业余爱好喜欢当UP猪）</p>
-                            <p><del>唱、跳、Rap、篮球</del></p>
-                            <p>写一些小的软件，发布</p>
-                        </article>
-                    </div>
-                </main>
+        <div class="content-card">
+            <main>
+                <!-- 头像部分 -->
+                <div class="avatar-container">
+                    <img class="avatar" src="logo.jpg" alt="Your Name's Avatar">
+                </div>
+                <!-- 自我介绍部分 -->
+                <div class="introduction">
+                    <h2>关于我</h2>
+                    <h2>Leaves_awa</h2>
+                    <article>
+                        <h3>安慕希原神卡拉彼丘糕手</h3>
+                        <h3>没事干的时候喜欢整点花活，B站最高视频播放量高达<h2>2.5W</h2></h3>
+                        <p>爱好：</p>
+                        <p>剪视频（业余爱好喜欢当UP猪）</p>
+                        <p><del>唱、跳、Rap、篮球</del></p>
+                        <p>写一些小的软件，发布</p>
+                    </article>
+                </div>
+            </main>
+        </div>
+
+        <div class="content-card">
+            <div class="social-links">
+                <h2>社交链接</h2>
+                <div class="social-icons">
+                    <a href="https://space.bilibili.com/1932462042" target="_blank" class="social-icon">
+                        <img src="img/bilibili-icon.png" alt="Bilibili">
+                    </a>
+                    <a href="https://github.com/MrBZBZ" target="_blank" class="social-icon">
+                        <img src="img/github-icon.png" alt="GitHub">
+                    </a>
+                </div>
             </div>
-            <div class="container-right">
+            
+            <div class="projects">
+                <h2>精选项目</h2>
+                <div class="project-card">
+                    <h3>个人博客系统</h3>
+                    <p>基于Vue和Node.js构建的个人博客平台</p>
+                    <a href="https://bzbz.netlify.app/" target="_blank">查看项目</a>
+                </div>
             </div>
         </div>
-        <footer>
-            <p>@2024 龙腾虎跃</p>
-            <div class="time">
-                <script> 
-                    document.write("<span id=time></span>") 
-                    setInterval("time.innerText=new Date().toLocaleString()",1000)
-                </script> 
-            </div>
+    </div>
+    <footer>
+        <p>@2024 龙腾虎跃</p>
+        <div class="time">
+            <script> 
+                document.write("<span id=time></span>") 
+                setInterval("time.innerText=new Date().toLocaleString()",1000)
+            </script> 
         </div>
-        </footer>
+    </footer>
     <script src="js/scripts.js"></script>
 </body>
 </html>
